@@ -100,9 +100,6 @@
             Label2.ForeColor = value
         End Set
     End Property
-
-
-
     Public Property the_date() As String
         Get
             Return Label1.Text
@@ -169,18 +166,16 @@
             the_num = value
         End Set
     End Property
-
-    Dim the_id_ As New Label
+    Dim the_id_ As String
 
     Public Property the_id() As String
         Get
-            Return the_id_.Text
+            Return the_id_
         End Get
         Set(ByVal value As String)
-            the_id_.Text = value
+            the_id_ = value
         End Set
     End Property
-
     Public Property the_delete_backcolor() As Color
         Get
             Return GunaElipsePanel2.BaseColor
@@ -189,7 +184,6 @@
             GunaElipsePanel2.BaseColor = value
         End Set
     End Property
-
     Public Property the_download_backcolor() As Color
         Get
             Return GunaElipsePanel1.BaseColor
@@ -198,7 +192,6 @@
             GunaElipsePanel1.BaseColor = value
         End Set
     End Property
-
     Public Property the_open_backcolor() As Color
         Get
             Return GunaElipsePanel3.BaseColor
@@ -207,12 +200,12 @@
             GunaElipsePanel3.BaseColor = value
         End Set
     End Property
-    Dim the_id_tag_ As Object
-    Public Property the_id_tag() As Object
+    Dim the_id_tag_ As String
+    Public Property the_id_tag() As String
         Get
             Return the_id_tag_
         End Get
-        Set(ByVal value As Object)
+        Set(ByVal value As String)
             the_id_tag_ = value
         End Set
     End Property

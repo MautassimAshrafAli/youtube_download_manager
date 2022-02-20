@@ -45,6 +45,7 @@ Partial Class OfflineVideoPlayer
         Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.timer4 = New System.Windows.Forms.Timer(Me.components)
+        Me.bunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -69,18 +70,18 @@ Partial Class OfflineVideoPlayer
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.GTrackBar1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 778)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Location = New System.Drawing.Point(0, 1089)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1349, 94)
+        Me.Panel1.Size = New System.Drawing.Size(1889, 132)
         Me.Panel1.TabIndex = 0
         '
         'PictureBox3
         '
         Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox3.Image = Global.Myplaylist.My.Resources.Resources.icons8_sort_down_20px
-        Me.PictureBox3.Location = New System.Drawing.Point(1318, 6)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox3.Location = New System.Drawing.Point(1845, 8)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(6)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(20, 20)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -94,12 +95,12 @@ Partial Class OfflineVideoPlayer
         Me.TableLayoutPanel1.ColumnCount = 1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(496, 16)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(694, 22)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(506, 66)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(708, 92)
         Me.TableLayoutPanel1.TabIndex = 56
         '
         'Label1
@@ -108,10 +109,10 @@ Partial Class OfflineVideoPlayer
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(4, 23)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(6, 31)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 20)
+        Me.Label1.Size = New System.Drawing.Size(78, 29)
         Me.Label1.TabIndex = 49
         Me.Label1.Text = "Name"
         '
@@ -119,10 +120,10 @@ Partial Class OfflineVideoPlayer
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.PictureBox1.Image = Global.Myplaylist.My.Resources.Resources.channels4_profile
-        Me.PictureBox1.Location = New System.Drawing.Point(424, 20)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(594, 28)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(6)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(65, 59)
+        Me.PictureBox1.Size = New System.Drawing.Size(91, 83)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -139,15 +140,15 @@ Partial Class OfflineVideoPlayer
         Me.GunaCircleButton3.ForeColor = System.Drawing.Color.White
         Me.GunaCircleButton3.Image = Nothing
         Me.GunaCircleButton3.ImageSize = New System.Drawing.Size(52, 52)
-        Me.GunaCircleButton3.Location = New System.Drawing.Point(105, 29)
-        Me.GunaCircleButton3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GunaCircleButton3.Location = New System.Drawing.Point(147, 41)
+        Me.GunaCircleButton3.Margin = New System.Windows.Forms.Padding(6)
         Me.GunaCircleButton3.Name = "GunaCircleButton3"
         Me.GunaCircleButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.GunaCircleButton3.OnHoverBorderColor = System.Drawing.Color.Transparent
         Me.GunaCircleButton3.OnHoverForeColor = System.Drawing.Color.White
         Me.GunaCircleButton3.OnHoverImage = Nothing
         Me.GunaCircleButton3.OnPressedColor = System.Drawing.Color.Transparent
-        Me.GunaCircleButton3.Size = New System.Drawing.Size(44, 44)
+        Me.GunaCircleButton3.Size = New System.Drawing.Size(62, 62)
         Me.GunaCircleButton3.TabIndex = 55
         Me.GunaCircleButton3.Text = ""
         '
@@ -163,15 +164,15 @@ Partial Class OfflineVideoPlayer
         Me.GunaCircleButton2.ForeColor = System.Drawing.Color.White
         Me.GunaCircleButton2.Image = Nothing
         Me.GunaCircleButton2.ImageSize = New System.Drawing.Size(52, 52)
-        Me.GunaCircleButton2.Location = New System.Drawing.Point(172, 29)
-        Me.GunaCircleButton2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GunaCircleButton2.Location = New System.Drawing.Point(241, 41)
+        Me.GunaCircleButton2.Margin = New System.Windows.Forms.Padding(6)
         Me.GunaCircleButton2.Name = "GunaCircleButton2"
         Me.GunaCircleButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.GunaCircleButton2.OnHoverBorderColor = System.Drawing.Color.Transparent
         Me.GunaCircleButton2.OnHoverForeColor = System.Drawing.Color.White
         Me.GunaCircleButton2.OnHoverImage = Nothing
         Me.GunaCircleButton2.OnPressedColor = System.Drawing.Color.Transparent
-        Me.GunaCircleButton2.Size = New System.Drawing.Size(44, 44)
+        Me.GunaCircleButton2.Size = New System.Drawing.Size(62, 62)
         Me.GunaCircleButton2.TabIndex = 54
         Me.GunaCircleButton2.Text = ""
         '
@@ -187,15 +188,15 @@ Partial Class OfflineVideoPlayer
         Me.GunaCircleButton1.ForeColor = System.Drawing.Color.White
         Me.GunaCircleButton1.Image = Nothing
         Me.GunaCircleButton1.ImageSize = New System.Drawing.Size(52, 52)
-        Me.GunaCircleButton1.Location = New System.Drawing.Point(40, 29)
-        Me.GunaCircleButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GunaCircleButton1.Location = New System.Drawing.Point(56, 41)
+        Me.GunaCircleButton1.Margin = New System.Windows.Forms.Padding(6)
         Me.GunaCircleButton1.Name = "GunaCircleButton1"
         Me.GunaCircleButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.GunaCircleButton1.OnHoverBorderColor = System.Drawing.Color.Transparent
         Me.GunaCircleButton1.OnHoverForeColor = System.Drawing.Color.White
         Me.GunaCircleButton1.OnHoverImage = Nothing
         Me.GunaCircleButton1.OnPressedColor = System.Drawing.Color.Transparent
-        Me.GunaCircleButton1.Size = New System.Drawing.Size(44, 44)
+        Me.GunaCircleButton1.Size = New System.Drawing.Size(62, 62)
         Me.GunaCircleButton1.TabIndex = 53
         Me.GunaCircleButton1.Text = ""
         '
@@ -205,10 +206,10 @@ Partial Class OfflineVideoPlayer
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe MDL2 Assets", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(122, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(1278, 41)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(1789, 57)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(22, 15)
+        Me.Label7.Size = New System.Drawing.Size(31, 21)
         Me.Label7.TabIndex = 52
         Me.Label7.Text = ""
         '
@@ -218,10 +219,10 @@ Partial Class OfflineVideoPlayer
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe MDL2 Assets", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(122, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(1216, 36)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(1702, 50)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(37, 25)
+        Me.Label5.Size = New System.Drawing.Size(50, 35)
         Me.Label5.TabIndex = 51
         Me.Label5.Text = ""
         '
@@ -235,12 +236,12 @@ Partial Class OfflineVideoPlayer
         Me.GTrackBar2.FloatValueFontColor = System.Drawing.Color.DodgerBlue
         Me.GTrackBar2.JumpToMouse = True
         Me.GTrackBar2.Label = Nothing
-        Me.GTrackBar2.Location = New System.Drawing.Point(1004, 48)
-        Me.GTrackBar2.Margin = New System.Windows.Forms.Padding(2, 4, 2, 4)
+        Me.GTrackBar2.Location = New System.Drawing.Point(1406, 67)
+        Me.GTrackBar2.Margin = New System.Windows.Forms.Padding(3, 6, 3, 6)
         Me.GTrackBar2.MaxValue = 100
         Me.GTrackBar2.Name = "GTrackBar2"
         Me.GTrackBar2.ShowFocus = False
-        Me.GTrackBar2.Size = New System.Drawing.Size(162, 4)
+        Me.GTrackBar2.Size = New System.Drawing.Size(227, 6)
         Me.GTrackBar2.SliderCapEnd = System.Drawing.Drawing2D.LineCap.Flat
         Me.GTrackBar2.SliderCapStart = System.Drawing.Drawing2D.LineCap.Flat
         ColorLinearGradient1.ColorA = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer))
@@ -267,10 +268,10 @@ Partial Class OfflineVideoPlayer
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe MDL2 Assets", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(122, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(1172, 36)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(1641, 50)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(37, 25)
+        Me.Label4.Size = New System.Drawing.Size(50, 35)
         Me.Label4.TabIndex = 49
         Me.Label4.Text = ""
         '
@@ -279,10 +280,10 @@ Partial Class OfflineVideoPlayer
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(122, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(245, 40)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(343, 56)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(78, 20)
+        Me.Label6.Size = New System.Drawing.Size(110, 29)
         Me.Label6.TabIndex = 48
         Me.Label6.Text = "0:00/0:00"
         '
@@ -297,12 +298,12 @@ Partial Class OfflineVideoPlayer
         Me.GTrackBar1.FloatValueFontColor = System.Drawing.Color.DodgerBlue
         Me.GTrackBar1.JumpToMouse = True
         Me.GTrackBar1.Label = Nothing
-        Me.GTrackBar1.Location = New System.Drawing.Point(-14, 0)
-        Me.GTrackBar1.Margin = New System.Windows.Forms.Padding(2, 4, 2, 4)
+        Me.GTrackBar1.Location = New System.Drawing.Point(-20, 0)
+        Me.GTrackBar1.Margin = New System.Windows.Forms.Padding(3, 6, 3, 6)
         Me.GTrackBar1.MaxValue = 100
         Me.GTrackBar1.Name = "GTrackBar1"
         Me.GTrackBar1.ShowFocus = False
-        Me.GTrackBar1.Size = New System.Drawing.Size(1379, 4)
+        Me.GTrackBar1.Size = New System.Drawing.Size(1931, 6)
         Me.GTrackBar1.SliderCapEnd = System.Drawing.Drawing2D.LineCap.Flat
         Me.GTrackBar1.SliderCapStart = System.Drawing.Drawing2D.LineCap.Flat
         ColorLinearGradient3.ColorA = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer))
@@ -329,20 +330,20 @@ Partial Class OfflineVideoPlayer
         Me.AxWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AxWindowsMediaPlayer1.Enabled = True
         Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(0, 0)
-        Me.AxWindowsMediaPlayer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.AxWindowsMediaPlayer1.Margin = New System.Windows.Forms.Padding(6)
         Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
         Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(1349, 778)
+        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(1889, 1089)
         Me.AxWindowsMediaPlayer1.TabIndex = 1
         '
         'PictureBox2
         '
         Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox2.Image = Global.Myplaylist.My.Resources.Resources.channels4_profile
-        Me.PictureBox2.Location = New System.Drawing.Point(488, 182)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox2.Location = New System.Drawing.Point(683, 255)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(6)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(374, 320)
+        Me.PictureBox2.Size = New System.Drawing.Size(524, 448)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 2
         Me.PictureBox2.TabStop = False
@@ -352,19 +353,24 @@ Partial Class OfflineVideoPlayer
         Me.timer4.Enabled = True
         Me.timer4.Interval = 29
         '
+        'bunifuElipse1
+        '
+        Me.bunifuElipse1.ElipseRadius = 25
+        Me.bunifuElipse1.TargetControl = Me
+        '
         'OfflineVideoPlayer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(168.0!, 168.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(1349, 872)
+        Me.ClientSize = New System.Drawing.Size(1889, 1221)
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox2)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "OfflineVideoPlayer"
         Me.Opacity = 0R
         Me.Text = "OfflineVideoPlayer"
@@ -399,4 +405,5 @@ Partial Class OfflineVideoPlayer
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Private WithEvents timer4 As Timer
+    Private WithEvents bunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
 End Class

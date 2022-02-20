@@ -40,9 +40,9 @@ Partial Class download_video
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.show_ = New System.Windows.Forms.Timer(Me.components)
         Me.time_ = New System.Windows.Forms.Timer(Me.components)
-        Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.timer4 = New System.Windows.Forms.Timer(Me.components)
         Me.a_h = New System.Windows.Forms.Timer(Me.components)
+        Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Panel2.SuspendLayout()
         Me.GunaElipsePanel2.SuspendLayout()
         Me.GunaElipsePanel1.SuspendLayout()
@@ -237,11 +237,6 @@ Partial Class download_video
         Me.time_.Enabled = True
         Me.time_.Interval = 1000
         '
-        'BunifuElipse1
-        '
-        Me.BunifuElipse1.ElipseRadius = 2
-        Me.BunifuElipse1.TargetControl = Me
-        '
         'timer4
         '
         Me.timer4.Enabled = True
@@ -250,6 +245,11 @@ Partial Class download_video
         'a_h
         '
         Me.a_h.Interval = 29
+        '
+        'BunifuElipse2
+        '
+        Me.BunifuElipse2.ElipseRadius = 25
+        Me.BunifuElipse2.TargetControl = Me
         '
         'download_video
         '
@@ -294,7 +294,7 @@ Partial Class download_video
     Friend WithEvents cs_ As TextBox
     Public WithEvents Panel2 As Panel
     Friend WithEvents time_ As Timer
-    Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Private WithEvents timer4 As Timer
     Private WithEvents a_h As Timer
+    Private WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
 End Class

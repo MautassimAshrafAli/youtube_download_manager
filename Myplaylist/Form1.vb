@@ -18,15 +18,6 @@ Public Class YoutubeHorn
         controlProperty.SetValue(control, value, Nothing)
     End Sub
 
-    'Protected Overrides ReadOnly Property CreateParams As CreateParams
-    '    Get
-    '        Dim cp = MyBase.CreateParams
-    '        cp.ExStyle = cp.ExStyle Or &H2000000
-    '        Return cp
-    '    End Get
-    'End Property
-
-    ''function to copy all directory to a file
     Public Function CopyDirectory(ByVal SrcPath As String, ByVal DestPath As String, Optional ByVal bQuiet As Boolean = False) As Boolean
 
         If DestPath.Substring(DestPath.Length - 1, 1) <> System.IO.Path.DirectorySeparatorChar Then
@@ -52,8 +43,6 @@ Public Class YoutubeHorn
 
         On Error Resume Next
 
-
-
         Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
 
         SetDoubleBuffering(Panel2, True)
@@ -67,9 +56,6 @@ Public Class YoutubeHorn
         SetDoubleBuffering(GunaWinCircleProgressIndicator1, True)
 
         Me.CenterToScreen()
-
-        Me.Size = New Size(977, 625)
-        'GunaElipsePanel1.Size = New Size(383, 27)
 
         'icon fornt text
 
@@ -85,9 +71,6 @@ Public Class YoutubeHorn
         v = New Guna.UI.Lib.ScrollBar.PanelScrollHelper(FlowLayoutPanel1, gunaVScrollBar1, False)
 
         Circular_PictureBox1.ImageLocation = "C:\ProgramData\Microsoft\User Account Pictures\user.png"
-
-
-
 
     End Sub
 
@@ -136,7 +119,7 @@ Public Class YoutubeHorn
         End If
 
     End Sub
-    Private Sub Go_Click(sender As Object, e As EventArgs) Handles Label7.Click
+    Private Async Sub Go_Click(sender As Object, e As EventArgs) Handles Label7.Click
 
 
         FlowLayoutPanel1.Refresh()
@@ -179,8 +162,13 @@ Public Class YoutubeHorn
 
             FlowLayoutPanel1.Controls.Add(list_y)
 
+            Await Task.Delay(100)
+
             AddHandler list_y.pic_click, AddressOf Pic_c
             AddHandler list_y.del_click, AddressOf del_c
+            'AddHandler list_y.openLink_click, AddressOf open_c
+
+
 
 
         End If
@@ -253,7 +241,7 @@ Public Class YoutubeHorn
     End Sub
     Dim itemcode As Match
     Dim st As String
-    Private Sub add_to_list_KeyDown(sender As Object, e As KeyEventArgs) Handles add_to_list.KeyDown
+    Private Async Sub add_to_list_KeyDown(sender As Object, e As KeyEventArgs) Handles add_to_list.KeyDown
 
         If e.KeyCode = Keys.Enter Then
 
@@ -263,7 +251,6 @@ Public Class YoutubeHorn
 
             Label2.Text = FlowLayoutPanel1.Controls.Count.ToString + " items"
 
-            ' Dim p As New PictureBox
             Dim list_y As New C_UI_.YutubeList_UI
 
             If add_to_list.Text <> "Insert the url" AndAlso add_to_list.Text <> String.Empty Then
@@ -296,8 +283,13 @@ Public Class YoutubeHorn
 
                 FlowLayoutPanel1.Controls.Add(list_y)
 
+                Await Task.Delay(100)
+
                 AddHandler list_y.pic_click, AddressOf Pic_c
                 AddHandler list_y.del_click, AddressOf del_c
+                'AddHandler list_y.openLink_click, AddressOf open_c
+
+
 
             End If
 
@@ -333,7 +325,7 @@ Public Class YoutubeHorn
 
     'function to rename the txt file
 
-    Private Sub renameFiles()
+    Private Async Sub renameFiles()
 
         Dim sourcePath As String = "C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\playList"
         Dim searchPattern As String = "*.txt"
@@ -347,26 +339,28 @@ Public Class YoutubeHorn
             File.Move(t.FullName, Path.Combine(t.Directory.FullName, "url" & i & ".txt"))
             i += 1
 
+            Await Task.Delay(100)
+
         Next
 
     End Sub
 
-
-
-
     Private Sub open_c(sender As Object, e As EventArgs)
+
+
+        openVideo._yUrl = DirectCast(sender, C_UI_.YutubeList_UI).the_id_tag.ToString()
+
         Dim ov As New openVideo
 
         ov.Show()
 
-        openVideo._yUrl = DirectCast(sender, C_UI_.YutubeList_UI).the_id_tag
-
+        'MessageBox.Show((DirectCast(sender, C_UI_.YutubeList_UI).the_id_tag).ToString())
 
     End Sub
 
     Public Shared list_yd As New C_UI_.downlodVideo
 
-    Private Sub download_c(sender As Object, e As EventArgs)
+    Private Async Sub download_c(sender As Object, e As EventArgs)
 
 
         Dim dv As New download_video()
@@ -443,7 +437,7 @@ Public Class YoutubeHorn
 
         For Each itemcode As Match In matches_t
 
-            list_yd.the_name = itemcode.Value.Split("""").GetValue(3)
+            list_yd.the_name = WebUtility.HtmlDecode(itemcode.Value.Split("""").GetValue(3))
 
 
         Next
@@ -508,6 +502,8 @@ Public Class YoutubeHorn
 
         'add the video
         dv.FlowLayoutPanel1.Controls.Add(list_yd)
+
+        Await Task.Delay(100)
 
 
     End Sub
@@ -614,33 +610,12 @@ Public Class YoutubeHorn
         gunaVScrollBar1.Maximum = FlowLayoutPanel1.VerticalScroll.Maximum
     End Sub
 
-    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
-
-        'If wifi_.ConnectionStatus = WifiStatus.Connected Then
-
-        '    Shell("cmd.exe /c cd/ & cd Users & cd " + System.IO.Path.GetFileName(s_) + " & cd Desktop & cd NEAR_VOS_TOOLS & cd music_player & cd bin & cd x86 & cd Release & start music_player.exe", AppWinStyle.Hide)
-
-
-
-        'Else
-
-        '    Dim eW As New wifi_error
-        '    eW.Show()
-
-        '    eW.BackColor = Panel2.BackColor
-        '    eW.Label3.ForeColor = Label3.ForeColor
-
-        'End If
-
-
-    End Sub
-
     Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
 
         GunaWinCircleProgressIndicator1.Visible = True
         GunaWinCircleProgressIndicator1.ProgressColor = Color.DodgerBlue
 
-        show_.RunWorkerAsync()
+        Timer2.Start()
     End Sub
 
     Private Sub timer4_Tick(sender As Object, e As EventArgs) Handles timer4.Tick
@@ -682,18 +657,14 @@ Public Class YoutubeHorn
         timer4.Start()
     End Sub
 
-    Dim is_run As Boolean = True
-    Private Sub BackgroundWorker2_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles show_.DoWork
-
-
-    End Sub
-
     Dim n As Integer = 0
     Dim the_link_id As String
-    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        On Error Resume Next
 
-        n += 1
+    Private Async Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+
+        Try
+
+            n += 1
 
             If n = 8 Then
 
@@ -705,11 +676,11 @@ Public Class YoutubeHorn
 
                 If My.Computer.FileSystem.DirectoryExists("C:\youtube-dl") = False Then
 
-                CopyDirectory("C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\Myplaylist\Myplaylist\bin\x86\Release\youtube-dl", "C:\youtube-dl")
+                    ' CopyDirectory("C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\Myplaylist\Myplaylist\bin\x86\Release\youtube-dl", "C:\youtube-dl")
 
-                'CopyDirectory("C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\NEAR_VOS_TOOLS\v_assistant\bin\Release\Youtube_Horn\youtube-dl", "C:\youtube-dl")
+                    CopyDirectory("C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\NEAR_VOS_TOOLS\v_assistant\bin\x64\Release\Youtube_Horn\youtube-dl", "C:\youtube-dl")
 
-            End If
+                End If
 
                 If My.Computer.FileSystem.DirectoryExists("C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\playList") = False Then
 
@@ -758,9 +729,8 @@ Public Class YoutubeHorn
                 Dim item_ As ObjectModel.ReadOnlyCollection(Of String)
                 item_ = My.Computer.FileSystem.GetFiles("C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\playList")
 
-
-
                 FlowLayoutPanel1.Controls.Clear()
+
 
 
                 For nu = 1 To item_.Count
@@ -786,8 +756,10 @@ Public Class YoutubeHorn
 
                     s = r1.Substring(r1.LastIndexOf("=") + 1)
 
+
                     Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://www.youtube.com/watch?v=" + s)
                     Dim response As System.Net.HttpWebResponse = request.GetResponse
+
 
                     Dim sr As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
 
@@ -808,12 +780,12 @@ Public Class YoutubeHorn
 
                     For Each itemcode As Match In matches_t
 
-                        list_y.the_name = itemcode.Value.Split("""").GetValue(3)
-
+                        list_y.the_name = WebUtility.HtmlDecode(itemcode.Value.Split("""").GetValue(3))
 
                     Next
 
                     'get url
+
 
                     list_y.Name = "https://www.youtube.com/watch?v=" + s
                     list_y.the_url = "https://www.youtube.com/watch?v=" + s
@@ -828,7 +800,6 @@ Public Class YoutubeHorn
 
                         list_y.the_date = "publish on:" + itemcode.Value.Split("""").GetValue(3)
 
-
                     Next
 
 
@@ -841,7 +812,6 @@ Public Class YoutubeHorn
                     For Each itemcode_g As Match In matches_g
 
                         list_y.the_genre = "genre:" + itemcode_g.Value.Split("""").GetValue(3)
-
 
                     Next
 
@@ -857,7 +827,6 @@ Public Class YoutubeHorn
 
                         list_y.the_channel = "channel:" + itemcode_t.Value.Split("""").GetValue(3)
 
-
                     Next
 
 
@@ -870,6 +839,8 @@ Public Class YoutubeHorn
                     'add the video
                     FlowLayoutPanel1.Controls.Add(list_y)
 
+                    Await Task.Delay(1)
+
 
                     AddHandler list_y.pic_click, AddressOf Pic_c
                     AddHandler list_y.del_click, AddressOf del_c
@@ -878,23 +849,28 @@ Public Class YoutubeHorn
 
                     'MessageBox.Show("d")
 
+
+
                     Label2.Text = FlowLayoutPanel1.Controls.Count.ToString() + " items"
 
                 Next
 
 
-
-
                 GunaWinCircleProgressIndicator1.Visible = False
 
-            n = 0
+                n = 0
 
-            Timer2.Stop()
-
-
+                Timer2.Stop()
 
 
-        End If
+
+
+            End If
+
+        Catch ex As Exception
+        End Try
+
+
 
     End Sub
 End Class

@@ -49,12 +49,12 @@ Partial Class YoutubeHorn
         Me.Label7 = New System.Windows.Forms.Label()
         Me.gunaVScrollBar1 = New Guna.UI.WinForms.GunaVScrollBar()
         Me.GunaResizeControl1 = New Guna.UI.WinForms.GunaResizeControl()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.a_h = New System.Windows.Forms.Timer(Me.components)
         Me.timer4 = New System.Windows.Forms.Timer(Me.components)
-        Me.show_ = New System.ComponentModel.BackgroundWorker()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.FlowLayoutPanel1 = New NEER_UI.CustomFlowLayoutPanel()
+        Me.bunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Panel2.SuspendLayout()
         Me.GunaElipsePanel3.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -152,7 +152,7 @@ Partial Class YoutubeHorn
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(24, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label15)
         Me.Panel2.Controls.Add(Me.Label14)
         Me.Panel2.Controls.Add(Me.Label12)
@@ -405,18 +405,6 @@ Partial Class YoutubeHorn
         Me.GunaResizeControl1.TabIndex = 5
         Me.GunaResizeControl1.TargetControl = Me
         '
-        'FlowLayoutPanel1
-        '
-        Me.FlowLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 277)
-        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(6, 3, 6, 3)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1794, 870)
-        Me.FlowLayoutPanel1.TabIndex = 1
-        '
         'timer1
         '
         Me.timer1.Enabled = True
@@ -430,20 +418,31 @@ Partial Class YoutubeHorn
         Me.timer4.Enabled = True
         Me.timer4.Interval = 29
         '
-        'show_
-        '
-        Me.show_.WorkerReportsProgress = True
-        Me.show_.WorkerSupportsCancellation = True
-        '
         'Timer2
         '
         Me.Timer2.Enabled = True
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FlowLayoutPanel1.AutoScroll = True
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 277)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1794, 870)
+        Me.FlowLayoutPanel1.TabIndex = 70
+        '
+        'bunifuElipse1
+        '
+        Me.bunifuElipse1.ElipseRadius = 25
+        Me.bunifuElipse1.TargetControl = Me
         '
         'YoutubeHorn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(168.0!, 168.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1794, 1200)
         Me.Controls.Add(Me.GunaResizeControl1)
         Me.Controls.Add(Me.gunaVScrollBar1)
@@ -487,7 +486,6 @@ Partial Class YoutubeHorn
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents GunaResizeControl1 As Guna.UI.WinForms.GunaResizeControl
     Friend WithEvents GunaWinCircleProgressIndicator1 As Guna.UI.WinForms.GunaWinCircleProgressIndicator
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Public WithEvents Label5 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents GunaElipsePanel3 As Guna.UI.WinForms.GunaElipsePanel
@@ -500,7 +498,8 @@ Partial Class YoutubeHorn
     Friend WithEvents Label15 As Label
     Private WithEvents a_h As Timer
     Private WithEvents timer4 As Timer
-    Private WithEvents show_ As System.ComponentModel.BackgroundWorker
     Private WithEvents Timer2 As Timer
+    Friend WithEvents FlowLayoutPanel1 As NEER_UI.CustomFlowLayoutPanel
+    Private WithEvents bunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     ' Friend WithEvents Circular_PictureBox1 As Myplaylist.Circular_PictureBox
 End Class

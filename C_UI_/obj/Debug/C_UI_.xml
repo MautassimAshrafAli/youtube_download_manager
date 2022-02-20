@@ -27,6 +27,11 @@ C_UI_
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:C_UI_.My.Resources.Resources.channels4_profile">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="T:C_UI_.LabelEx.BorderType">
  <summary>Enum of BorderTypes used for the Labels BorderStyle.</summary> 
 </member>

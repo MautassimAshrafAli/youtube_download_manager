@@ -29,6 +29,8 @@ Public Class offlineList
         Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
 
 
+
+
         SetDoubleBuffering(Panel2, True)
         SetDoubleBuffering(FlowLayoutPanel1, True)
         SetDoubleBuffering(GunaResizeControl1, True)

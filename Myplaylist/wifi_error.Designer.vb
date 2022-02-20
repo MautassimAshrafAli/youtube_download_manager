@@ -32,6 +32,7 @@ Partial Class wifi_error
         Me.timer4 = New System.Windows.Forms.Timer(Me.components)
         Me.a_h = New System.Windows.Forms.Timer(Me.components)
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
+        Me.bunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.GunaLinePanel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
@@ -50,9 +51,9 @@ Partial Class wifi_error
         Me.GunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None
         Me.GunaLinePanel1.LineTop = 3
         Me.GunaLinePanel1.Location = New System.Drawing.Point(0, 0)
-        Me.GunaLinePanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GunaLinePanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.GunaLinePanel1.Name = "GunaLinePanel1"
-        Me.GunaLinePanel1.Size = New System.Drawing.Size(649, 311)
+        Me.GunaLinePanel1.Size = New System.Drawing.Size(909, 435)
         Me.GunaLinePanel1.TabIndex = 0
         '
         'Panel4
@@ -60,10 +61,10 @@ Partial Class wifi_error
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Panel4.Controls.Add(Me.Label2)
-        Me.Panel4.Location = New System.Drawing.Point(255, 211)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Location = New System.Drawing.Point(357, 295)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(149, 41)
+        Me.Panel4.Size = New System.Drawing.Size(209, 57)
         Me.Panel4.TabIndex = 19
         '
         'Label2
@@ -71,10 +72,10 @@ Partial Class wifi_error
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(60, 11)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(84, 15)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(29, 20)
+        Me.Label2.Size = New System.Drawing.Size(41, 30)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "OK"
         '
@@ -84,10 +85,10 @@ Partial Class wifi_error
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.GhostWhite
-        Me.Label1.Location = New System.Drawing.Point(166, 124)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(232, 174)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(323, 20)
+        Me.Label1.Size = New System.Drawing.Size(453, 29)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Wifi is offline check your wifi and try again" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -97,10 +98,10 @@ Partial Class wifi_error
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe MDL2 Assets", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.LightGray
-        Me.Label3.Location = New System.Drawing.Point(612, 11)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label3.Location = New System.Drawing.Point(857, 15)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(7, 0, 7, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(21, 14)
+        Me.Label3.Size = New System.Drawing.Size(29, 20)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = ""
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -121,17 +122,22 @@ Partial Class wifi_error
         Me.BunifuDragControl1.TargetControl = Me.GunaLinePanel1
         Me.BunifuDragControl1.Vertical = True
         '
+        'bunifuElipse1
+        '
+        Me.bunifuElipse1.ElipseRadius = 25
+        Me.bunifuElipse1.TargetControl = Me
+        '
         'wifi_error
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(168.0!, 168.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(11, Byte), Integer), CType(CType(11, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(649, 311)
+        Me.ClientSize = New System.Drawing.Size(909, 435)
         Me.Controls.Add(Me.GunaLinePanel1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Name = "wifi_error"
         Me.Opacity = 0R
         Me.Text = "wifi_error"
@@ -151,4 +157,5 @@ Partial Class wifi_error
     Private WithEvents timer4 As Timer
     Private WithEvents a_h As Timer
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
+    Private WithEvents bunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
 End Class

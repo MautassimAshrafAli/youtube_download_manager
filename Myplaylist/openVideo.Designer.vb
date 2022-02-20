@@ -25,30 +25,24 @@ Partial Class openVideo
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(openVideo))
         Me.webBrowser1 = New System.Windows.Forms.WebBrowser()
-        Me.start_url = New System.Windows.Forms.Timer(Me.components)
         Me.bunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.timer4 = New System.Windows.Forms.Timer(Me.components)
         Me.a_h = New System.Windows.Forms.Timer(Me.components)
+        Me.bunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'webBrowser1
         '
         Me.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.webBrowser1.Location = New System.Drawing.Point(0, 74)
-        Me.webBrowser1.Margin = New System.Windows.Forms.Padding(2)
-        Me.webBrowser1.MinimumSize = New System.Drawing.Size(19, 18)
+        Me.webBrowser1.Location = New System.Drawing.Point(0, 104)
+        Me.webBrowser1.MinimumSize = New System.Drawing.Size(27, 25)
         Me.webBrowser1.Name = "webBrowser1"
         Me.webBrowser1.ScrollBarsEnabled = False
-        Me.webBrowser1.Size = New System.Drawing.Size(880, 564)
+        Me.webBrowser1.Size = New System.Drawing.Size(1232, 789)
         Me.webBrowser1.TabIndex = 7
-        '
-        'start_url
-        '
-        Me.start_url.Enabled = True
-        Me.start_url.Interval = 29
         '
         'bunifuDragControl1
         '
@@ -63,9 +57,8 @@ Partial Class openVideo
         Me.panel1.Controls.Add(Me.Label3)
         Me.panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.panel1.Location = New System.Drawing.Point(0, 0)
-        Me.panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.panel1.Name = "panel1"
-        Me.panel1.Size = New System.Drawing.Size(880, 74)
+        Me.panel1.Size = New System.Drawing.Size(1232, 104)
         Me.panel1.TabIndex = 8
         '
         'Label3
@@ -74,10 +67,10 @@ Partial Class openVideo
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe MDL2 Assets", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.LightGray
-        Me.Label3.Location = New System.Drawing.Point(850, 11)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label3.Location = New System.Drawing.Point(1190, 15)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(7, 0, 7, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(21, 14)
+        Me.Label3.Size = New System.Drawing.Size(29, 20)
         Me.Label3.TabIndex = 40
         Me.Label3.Text = ""
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -91,18 +84,23 @@ Partial Class openVideo
         '
         Me.a_h.Interval = 29
         '
+        'bunifuElipse1
+        '
+        Me.bunifuElipse1.ElipseRadius = 25
+        Me.bunifuElipse1.TargetControl = Me
+        '
         'openVideo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(168.0!, 168.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(880, 638)
+        Me.ClientSize = New System.Drawing.Size(1232, 893)
         Me.Controls.Add(Me.webBrowser1)
         Me.Controls.Add(Me.panel1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "openVideo"
         Me.Opacity = 0R
         Me.Text = "openVideo"
@@ -114,9 +112,9 @@ Partial Class openVideo
 
     Public WithEvents webBrowser1 As WebBrowser
     Private WithEvents panel1 As Panel
-    Private WithEvents start_url As Timer
     Private WithEvents bunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents Label3 As Label
     Private WithEvents timer4 As Timer
     Private WithEvents a_h As Timer
+    Private WithEvents bunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
 End Class

@@ -11,31 +11,15 @@ Public Class openVideo
 
 		Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
 
-		webBrowser1.DocumentText = "<html><body style='background-color:" + "000000" + "'></body></html>"
-		webBrowser1.ScriptErrorsSuppressed = False
+	
+		webBrowser1.DocumentText = String.Format(
+					"<meta http-equiv='X-UA-Compatible' content='IE=Edge'/>" &
+				  "<iframe width=""{1}"" height=""{2}""" &
+				  " src=""https://www.youtube.com/embed/{0}?autoplay=1"" title = ""YouTube video player"" frameborder=""0"" allow = ""accelerometer; autoplay; clipboard - write; encrypted - media; gyroscope; picture -In-picture"" allowfullscreen scrolling='no'; encrypted-media; gyroscope;></iframe>", _yUrl, webBrowser1.Width - 25, webBrowser1.Height - 20)
+
 
 	End Sub
-	Dim s As Integer = 0
-    Private Sub start_url_Tick(sender As Object, e As EventArgs) Handles start_url.Tick
 
-        s += 1
-
-		If s = 2 Then
-
-
-			webBrowser1.DocumentText = String.Format("<meta http-equiv='X-UA-Compatible' content='IE=Edge'/>" & "<iframe id='video'" & " src='https://www.youtube.com/embed/{0}?autoplay=1'  width='100%' height='430' frameborder='0' allowfullscreen scrolling=""no""; autoplay;" & " encrypted-media; gyroscope;></iframe>", _yUrl)
-
-
-
-		End If
-
-		If s = 3 Then
-
-			start_url.Stop()
-
-		End If
-
-	End Sub
 
 	Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 		Me.Close()
@@ -74,5 +58,9 @@ Public Class openVideo
 
 	Private Sub panel1_MouseUp(sender As Object, e As MouseEventArgs) Handles panel1.MouseUp
 		timer4.Start()
+	End Sub
+
+	Private Sub webBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles webBrowser1.DocumentCompleted
+		webBrowser1.Document.Body.Style = "overflow:hidden"
 	End Sub
 End Class

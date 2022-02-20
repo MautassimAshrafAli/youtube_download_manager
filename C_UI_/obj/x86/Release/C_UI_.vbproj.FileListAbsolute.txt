@@ -42,3 +42,4 @@ C:\Users\ashra\Desktop\Myplaylist\C_UI_\obj\x86\Release\C_UI_.vbproj.CopyComplet
 C:\Users\ashra\Desktop\Myplaylist\C_UI_\obj\x86\Release\C_UI_.dll
 C:\Users\ashra\Desktop\Myplaylist\C_UI_\obj\x86\Release\C_UI_.xml
 C:\Users\ashra\Desktop\Myplaylist\C_UI_\obj\x86\Release\C_UI_.pdb
+C:\Users\ashra\Desktop\Myplaylist\C_UI_\obj\x86\Release\C_UI_.vbprojAssemblyReference.cache

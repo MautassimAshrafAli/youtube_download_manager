@@ -97,3 +97,4 @@ C:\Users\ashra\Desktop\Myplaylist\Myplaylist\obj\x86\Release\Myplaylist.vbproj.C
 C:\Users\ashra\Desktop\Myplaylist\Myplaylist\obj\x86\Release\Youtube Horn.exe
 C:\Users\ashra\Desktop\Myplaylist\Myplaylist\obj\x86\Release\Youtube Horn.xml
 C:\Users\ashra\Desktop\Myplaylist\Myplaylist\obj\x86\Release\Youtube Horn.pdb
+C:\Users\ashra\Desktop\Myplaylist\Myplaylist\bin\x86\Release\NEER UI.dll

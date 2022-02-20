@@ -71,7 +71,7 @@ Public Class download_video
 
         ' Shell("cmd.exe /c cd/ & cd Windows & cd youtube-dl & youtube-dl --update & youtube-dl -x --audio-format " + cs_.Text + " -o ""C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\My_offlineSound_list\%(title)s.%(ext)s"" --no-mtime " + the_link_.Text, AppWinStyle.NormalFocus)
 
-        Shell("cmd.exe /c cd/ & cd Windows & cd youtube-dl & youtube-dl -x --audio-format " + cs_.Text + " -o ""C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\My_offlineSound_list\%(title)s.%(ext)s"" --no-mtime " + the_link_.Text, AppWinStyle.NormalFocus)
+        Shell("cmd.exe /c cd/ & cd youtube-dl & youtube-dl -x --audio-format " + cs_.Text + " -o ""C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\My_offlineSound_list\%(title)s.%(ext)s"" --no-mtime " + the_link_.Text, AppWinStyle.NormalFocus)
 
     End Sub
 
@@ -80,7 +80,7 @@ Public Class download_video
         'Shell("cmd.exe /c cd/ & cd Windows & cd youtube-dl & youtube-dl --update & youtube-dl -f " + cv_.Text + " -f best -o ""C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\My_offlineVideo_list\%(title)s.%(ext)s"" --no-mtime " + the_link_.Text, AppWinStyle.NormalFocus)
 
 
-        Shell("cmd.exe /c cd/ & cd Windows & cd youtube-dl & youtube-dl -f " + cv_.Text + " -f best -o ""C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\My_offlineVideo_list\%(title)s.%(ext)s"" --no-mtime " + the_link_.Text, AppWinStyle.NormalFocus)
+        Shell("cmd.exe /c cd/ & cd youtube-dl & youtube-dl -f " + cv_.Text + " -f best -o ""C:\Users\" + System.IO.Path.GetFileName(s_) + "\Desktop\My_offlineVideo_list\%(title)s.%(ext)s"" --no-mtime " + the_link_.Text, AppWinStyle.NormalFocus)
 
     End Sub
 

@@ -39,10 +39,10 @@ Partial Class offlineList
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.GunaResizeControl1 = New Guna.UI.WinForms.GunaResizeControl()
         Me.timer4 = New System.Windows.Forms.Timer(Me.components)
         Me.a_h = New System.Windows.Forms.Timer(Me.components)
+        Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.Circular_PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,7 +82,7 @@ Partial Class offlineList
         '
         Me.listView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.listView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.listView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.listView1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.listView1.ForeColor = System.Drawing.Color.White
@@ -101,12 +101,12 @@ Partial Class offlineList
         'imageList1
         '
         Me.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
-        Me.imageList1.ImageSize = New System.Drawing.Size(30, 30)
+        Me.imageList1.ImageSize = New System.Drawing.Size(50, 50)
         Me.imageList1.TransparentColor = System.Drawing.Color.Transparent
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label14)
         Me.Panel2.Controls.Add(Me.Label12)
         Me.Panel2.Controls.Add(Me.Label4)
@@ -117,7 +117,7 @@ Partial Class offlineList
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(7)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1709, 277)
         Me.Panel2.TabIndex = 3
@@ -206,9 +206,9 @@ Partial Class offlineList
         '
         'Circular_PictureBox1
         '
-        Me.Circular_PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.Circular_PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
         Me.Circular_PictureBox1.Location = New System.Drawing.Point(29, 106)
-        Me.Circular_PictureBox1.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.Circular_PictureBox1.Margin = New System.Windows.Forms.Padding(7)
         Me.Circular_PictureBox1.Name = "Circular_PictureBox1"
         Me.Circular_PictureBox1.Size = New System.Drawing.Size(105, 105)
         Me.Circular_PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -238,11 +238,6 @@ Partial Class offlineList
         '
         Me.timer1.Enabled = True
         '
-        'BunifuElipse1
-        '
-        Me.BunifuElipse1.ElipseRadius = 2
-        Me.BunifuElipse1.TargetControl = Me
-        '
         'GunaResizeControl1
         '
         Me.GunaResizeControl1.BackColor = System.Drawing.Color.Transparent
@@ -250,7 +245,7 @@ Partial Class offlineList
         Me.GunaResizeControl1.ForeColor = System.Drawing.Color.White
         Me.GunaResizeControl1.ForeColorDepth = 255
         Me.GunaResizeControl1.Location = New System.Drawing.Point(0, 1044)
-        Me.GunaResizeControl1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.GunaResizeControl1.Margin = New System.Windows.Forms.Padding(6)
         Me.GunaResizeControl1.Name = "GunaResizeControl1"
         Me.GunaResizeControl1.Size = New System.Drawing.Size(1709, 49)
         Me.GunaResizeControl1.TabIndex = 5
@@ -265,12 +260,17 @@ Partial Class offlineList
         '
         Me.a_h.Interval = 29
         '
+        'BunifuElipse2
+        '
+        Me.BunifuElipse2.ElipseRadius = 25
+        Me.BunifuElipse2.TargetControl = Me
+        '
         'offlineList
         '
         Me.AllowDrop = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(168.0!, 168.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1709, 1093)
         Me.Controls.Add(Me.gunaVScrollBar1)
         Me.Controls.Add(Me.GunaResizeControl1)
@@ -279,7 +279,7 @@ Partial Class offlineList
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MinimumSize = New System.Drawing.Size(1709, 1093)
         Me.Name = "offlineList"
         Me.Opacity = 0R
@@ -306,8 +306,8 @@ Partial Class offlineList
     Private WithEvents timer1 As Timer
     Public WithEvents listView1 As ListView
     Friend WithEvents Label14 As Label
-    Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents GunaResizeControl1 As Guna.UI.WinForms.GunaResizeControl
     Private WithEvents timer4 As Timer
     Private WithEvents a_h As Timer
+    Private WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
 End Class
